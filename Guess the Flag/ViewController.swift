@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         button0.layer.borderColor = UIColor.lightGray.cgColor
         button1.layer.borderColor = UIColor.lightGray.cgColor
         button2.layer.borderColor = UIColor(red: 1.0, green: 0.6, blue: 0.2, alpha: 1.0).cgColor
-
         askQuestion()
     }
 
@@ -63,6 +62,9 @@ class ViewController: UIViewController {
 //        let finalScore = "Your score is \(score)"
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Countinue", style: UIAlertActionStyle.default, handler: askQuestion))
+        print( type(of: askQuestion()) )
+        print(type(of: askQuestion))
+
         present(ac, animated: true, completion: nil)
         
     }
